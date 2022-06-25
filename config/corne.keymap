@@ -11,16 +11,6 @@
 / {
 
     macros {
-        zed_em_kay: zed_em_kay {
-            label = "ZM_zed_em_kay";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp Z &kp M &kp K>
-                , <&macro_release &kp LSHFT>
-                ;
-        };
         c_trancada: c_trancada {
             label = "ZM_c_trancada";
             compatible = "zmk,behavior-macro";
@@ -33,6 +23,29 @@
                 , <&macro_release &kp LSHFT &kp LCTRL>
                 , <&macro_tap &kp E &kp KP_N7 &kp RET>
                 ;
+        };
+        c_trancada_mayus: c_trancada_mayus {
+            label = "c_trancada_mayus";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press &kp LSHFT &kp LCTRL>
+                , <&macro_tap &kp U>
+                , <&macro_release &kp LSHFT &kp LCTRL>
+                , <&macro_tap &kp C &kp KP_N7 &kp RET>
+                ;
+        };
+    };
+
+    behaviors {
+        c_trancada_beha: c_trancada_beha {
+            compatible = "zmk,behavior-mod-morph";
+            label = "c_trancada_beha";
+            #binding-cells = <0>;
+            bindings = <&c_trancada>, <&c_trancada_mayus>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
@@ -48,7 +61,7 @@
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &c_trancada
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &c_trancada_beha
                   &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
                         >;
                 };
