@@ -53,15 +53,15 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// ------------------------------------------------------------------------------------------------
-// | TAB      |  Q        |  W  |  F  |  P   |  B  |   |  J  |  L   |  U  |  Y  |  ;       | BKSP |
-// | ESC LALT |  A        |  R  |  S  |  T   |  G  |   |  M  |  N   |  E  |  I  |  O       |  '   |
-// | SHFT     |  Z LCTRL  |  X  |  C  |  D   |  V  |   |  K  |  H   |  ,  |  .  |  CTRL /  |  Ç   |
+// -------------------------------------------------------------------------------------------------
+// | TAB      |  Q        |  W  |  F  |  P   |  B  |   |  J  |  L   |  U  |  Y  |  ;        | BKSP |
+// | ESC LALT |  A        |  R  |  S  |  T   |  G  |   |  M  |  N   |  E  |  I  |  O        |  '   |
+// | SHFT     |  Z LCTRL  |  X  |  C  |  D   |  V  |   |  K  |  H   |  ,  |  .  |  RCTRL /  |  Ç   |
 //                              | GUI | BSPC | SPC |   | LWR | ENT  | RSE |
                         bindings = <
    &kp TAB      &kp Q       &kp W &kp F    &kp P    &kp B       &kp J &kp L   &kp U     &kp Y   &kp SEMI      &kp BSPC
    &mt LALT ESC &kp A       &kp R &kp S    &kp T    &kp G       &kp M &kp N   &kp E     &kp I   &kp O         &kp SQT
-   &kp LSHFT    &mt Z LCTRL &kp X &kp C    &kp D    &kp V       &kp K &kp H   &kp COMMA &kp DOT &mt CTRL FSLH &c_trancada_beha
+   &kp LSHFT    &mt Z LCTRL &kp X &kp C    &kp D    &kp V       &kp K &kp H   &kp COMMA &kp DOT &mt RCTRL FSLH &c_trancada_beha
                   &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
                         >;
                 };
