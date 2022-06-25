@@ -28,8 +28,12 @@
             wait-ms = <40>;
             tap-ms = <40>;
             bindings
-                = <&macro_press &kp LSHFIT &kp CTRL &kp U>
-                , <&macro_release &kp LSHFIT &kp CTRL &kp U>
+                = <&macro_press &kp LSHFIT>
+                , <&macro_press &kp CTRL>
+                , <&macro_press &kp U>
+                , <&macro_release &kp LSHFIT>
+                , <&macro_release &kp CTRL>
+                , <&macro_release &kp U>
                 , <&macro_tap &kp E &kp KP_N7>
                 ;
         };
