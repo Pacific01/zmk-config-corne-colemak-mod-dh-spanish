@@ -14,14 +14,14 @@
 
                 default_layer {
 // -------------------------------------------------------------------------------------------
-// | TAB      |  Q        |  W  |  E  |  R   |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | ESC LALT |  A        |  S  |  D  |  F   |  G  |   |  H  |  J   |  K  |  L  | Ñ   |  '   |
-// | SHFT     |  Z LCTRL  |  X  |  C  |  V   |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                              | GUI | BSPC | SPC |   | LWR | ENT  | RSE |
+// | TAB      |  Q        |  W  |  F  |  P   |  B  |   |  J  |  L   |  U  |  Y  |     | BKSP |
+// | ESC LALT |  A        |  R  |  S  |  T   |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
+// | SHFT     |  Z LCTRL  |  X  |  C  |  D   |  V  |   |  K  |  H   |  ,  |  .  |  /  |      |
+//                              | GUI | BSPC | SPC |   | LWR | ENT  | RSE |<
                         bindings = <
-   &kp TAB      &kp Q       &kp W &kp E    &kp R    &kp T       &kp Y &kp U  &kp I     &kp O   &kp P         &kp BSPC
-   &mt LALT ESC &kp A       &kp S &kp D    &kp F    &kp G       &kp H &kp J  &kp K     &kp L   &kp Ñ         &kp SQT
-   &kp LSHFT    &mt Z LCTRL &kp X &kp C    &kp V    &kp B       &kp N &kp M  &kp COMMA &kp DOT &mt CTRL FSLH &trans
+   &kp TAB      &kp Q       &kp W &kp F    &kp P    &kp B       &kp J &kp L  &kp U     &kp Y   &trans           &kp BSPC
+   &mt LALT ESC &kp A       &kp R &kp S    &kp T    &kp G       &kp M &kp N  &kp E     &kp I   &kp O         &kp SQT
+   &kp LSHFT    &mt Z LCTRL &kp X &kp C    &kp D    &kp V       &kp K &kp H  &kp COMMA &kp DOT &mt CTRL FSLH &trans
                                   &kp LGUI &kp BSPC &kp SPACE   &mo 1 &kp RET &mo 2
                         >;
                 };
